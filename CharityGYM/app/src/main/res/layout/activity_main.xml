@@ -53,6 +53,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/contact_phone_content_description"
                     android:src="@drawable/phone_icon" />
 
                 <TextView
@@ -60,7 +61,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="16dp"
-                    android:text="+375 (44) 123-46-58" />
+                    android:layout_marginStart="16dp"
+                    android:text="@string/contact_phone" />
             </LinearLayout>
 
             <LinearLayout
@@ -73,6 +75,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/contact_email_content_description"
                     android:src="@drawable/email_icon" />
 
                 <TextView
@@ -80,7 +83,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="16dp"
-                    android:text="dev.kudasov@gmail.com" />
+                    android:layout_marginStart="16dp"
+                    android:text="@string/contact_email" />
             </LinearLayout>
 
             <LinearLayout
@@ -93,6 +97,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/contact_web_content_description"
                     android:src="@drawable/web_icon" />
 
                 <TextView
@@ -100,7 +105,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="16dp"
-                    android:text="charity-gym.com" />
+                    android:layout_marginStart="16dp"
+                    android:text="@string/contact_web" />
             </LinearLayout>
 
             <LinearLayout
@@ -113,6 +119,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/contact_location_content_description"
                     android:src="@drawable/location_icon" />
 
                 <TextView
@@ -120,14 +127,15 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="16dp"
-                    android:text="Minsk, Europe" />
+                    android:layout_marginStart="16dp"
+                    android:text="@string/contact_location" />
             </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Be a part of one of the most charity organizations in the world. Be fit. Be charity." />
+                android:text="@string/description" />
 
         </LinearLayout>
     </ScrollView>
