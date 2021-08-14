@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">Charity GYM</string>
     <string name="app_banner_description">Charity GYM company banner</string>
+    <string name="contact_phone">+375 (44) 123&#8211;46&#8211;58</string>
+    <string name="contact_email">dev.kudasov@gmail.com</string>
+    <string name="contact_web">charity-gym.com</string>
+    <string name="contact_location">Minsk, Europe</string>
+    <string name="description">Be a part of one of the most charity organizations in the world. Be fit. Be charity.</string>
+
+    <string name="contact_phone_content_description">Contact us by phone +375 (44) 123&#8211;46&#8211;58</string>
+    <string name="contact_email_content_description">Contact us by email dev.kudasov@gmail.com</string>
+    <string name="contact_web_content_description">Visit our web site charity-gym.com</string>
+    <string name="contact_location_content_description">We will be glad to see you on our gym. Minsk, Europe</string>
 </resources>
