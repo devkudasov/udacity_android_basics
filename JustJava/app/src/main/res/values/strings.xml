@@ -2,5 +2,6 @@
     <string name="app_name">Just Java</string>
     <string name="quantity_title">Quantity</string>
     <string name="quantity_default">0</string>
+    <string name="quantity">%1$d</string>
     <string name="button_text">Order</string>
 </resources>

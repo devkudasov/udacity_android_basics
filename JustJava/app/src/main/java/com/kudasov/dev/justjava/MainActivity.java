@@ -20,6 +20,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void display(int number) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_count);
-        quantityTextView.setText("" + number);
+        quantityTextView.setText(getString(R.string.quantity, number));
     }
 }
