@@ -1,10 +1,12 @@
 package com.kudasov.dev.justjava;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,11 +17,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void submitOrder(View view) {
-        display(1);
+        displayQuantity(2);
+        displayPrice(2 * 5);
     }
 
-    private void display(int number) {
+    private void displayQuantity(int number) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_count);
         quantityTextView.setText(getString(R.string.quantity, number));
+    }
+
+    private void displayPrice(int number) {
+        TextView priceTextView = (TextView) findViewById(R.id.price_count);
+        priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
     }
 }
