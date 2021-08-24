@@ -38,7 +38,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void decrement(View view) {
-        quantity--;
-        displayQuantity();
+        if (quantity > 0) {
+            quantity--;
+            displayQuantity();
+        }
     }
 }
