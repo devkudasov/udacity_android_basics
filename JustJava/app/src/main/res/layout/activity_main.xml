@@ -20,7 +20,6 @@
         android:id="@+id/quantity_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:paddingVertical="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/quantity" >
@@ -28,23 +27,23 @@
         <Button
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:text="@string/increment"
-            android:onClick="increment"/>
+            android:text="@string/decrement"
+            android:onClick="decrement"/>
 
         <TextView
             android:id="@+id/quantity_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/quantity_default"
-            android:paddingVertical="8dp"
+            android:paddingHorizontal="8dp"
             android:textColor="@color/black"
             android:textSize="16sp" />
 
         <Button
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:text="@string/decrement"
-            android:onClick="decrement"/>
+            android:text="@string/increment"
+            android:onClick="increment"/>
 
     </LinearLayout>
 
