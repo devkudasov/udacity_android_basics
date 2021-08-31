@@ -3,9 +3,14 @@
     <string name="score">0</string>
     <string name="team_a_title">Team A</string>
     <string name="team_b_title">Team B</string>
-    <string name="three_point">3 point</string>
-    <string name="two_point">2 point</string>
-    <string name="one_point">Free throw</string>
+    <string name="three_point">+3</string>
+    <string name="two_point">+2</string>
+    <string name="one_point">+1</string>
     <string name="score_count">%d</string>
     <string name="reset">Reset</string>
+    <string name="player1">Player 1</string>
+    <string name="player2">Player 2</string>
+    <string name="player3">Player 3</string>
+    <string name="player4">Player 4</string>
+    <string name="player5">Player 5</string>
 </resources>

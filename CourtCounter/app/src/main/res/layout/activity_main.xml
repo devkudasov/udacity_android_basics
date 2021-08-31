@@ -6,130 +6,102 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_marginTop="40dp"
-        tools:context=".MainActivity">
+        android:layout_marginTop="12dp"
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             tools:context=".MainActivity">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/team_a_title" />
+                android:layout_weight="1"
+                android:orientation="vertical"
+                tools:context=".MainActivity">
 
-            <TextView
-                android:id="@+id/team_a_score"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="8dp"
-                android:textSize="100sp"
-                android:textColor="@color/black"
-                android:text="@string/score" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/team_a_title" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginVertical="8dp"
-                android:layout_marginHorizontal="30dp"
-                android:onClick="setThreePointA"
-                android:text="@string/three_point" />
+                <TextView
+                    android:id="@+id/team_a_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="8dp"
+                    android:text="@string/score"
+                    android:textColor="@color/black"
+                    android:textSize="50sp" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginVertical="8dp"
-                android:layout_marginHorizontal="30dp"
-                android:onClick="setTwoPointA"
-                android:text="@string/two_point" />
 
-            <Button
-                android:layout_width="match_parent"
+                <include layout="@layout/team_a_player_1" />
+
+                <include layout="@layout/team_a_player_2" />
+
+                <include layout="@layout/team_a_player_3" />
+
+                <include layout="@layout/team_a_player_4" />
+
+                <include layout="@layout/team_a_player_5" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginVertical="8dp"
-                android:layout_marginHorizontal="30dp"
-                android:onClick="setOnePointA"
-                android:text="@string/one_point" />
+                android:layout_weight="1"
+                android:orientation="vertical"
+                tools:context=".MainActivity">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/team_b_title" />
+
+                <TextView
+                    android:id="@+id/team_b_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="8dp"
+                    android:text="@string/score"
+                    android:textColor="@color/black"
+                    android:textSize="50sp" />
+
+                <include layout="@layout/team_b_player_1" />
+
+                <include layout="@layout/team_b_player_2" />
+
+                <include layout="@layout/team_b_player_3" />
+
+                <include layout="@layout/team_b_player_4" />
+
+                <include layout="@layout/team_b_player_5" />
+
+            </LinearLayout>
 
         </LinearLayout>
-
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:background="@color/black"/>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:paddingTop="8dp"
-            tools:context=".MainActivity">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/team_b_title" />
-
-            <TextView
-                android:id="@+id/team_b_score"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="8dp"
-                android:textSize="100sp"
-                android:textColor="@color/black"
-                android:text="@string/score" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginVertical="8dp"
-                android:layout_marginHorizontal="30dp"
-                android:onClick="setThreePointB"
-                android:text="@string/three_point" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginVertical="8dp"
-                android:layout_marginHorizontal="30dp"
-                android:onClick="setTwoPointB"
-                android:text="@string/two_point" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginVertical="8dp"
-                android:layout_marginHorizontal="30dp"
-                android:onClick="setOnePointB"
-                android:text="@string/one_point" />
-
-        </LinearLayout>
-
-    </LinearLayout>
+    </ScrollView>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="48dp"
-        android:text="@string/reset"
-        android:onClick="reset"/>
+        android:layout_marginTop="12dp"
+        android:onClick="reset"
+        android:text="@string/reset" />
 
 </LinearLayout>
