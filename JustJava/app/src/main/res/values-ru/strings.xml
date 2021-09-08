@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Just Java</string>
+    <string name="topping_title">Топинг</string>
+    <string name="whipped_cream_checkbox_title">Взбитые сливки</string>
+    <string name="chocolate_checkbox_title">Шоколад</string>
+    <string name="quantity_title">Количество</string>
+    <string name="name_placeholder">Имя</string>
+    <string name="button_text">Заказать</string>
+</resources>
