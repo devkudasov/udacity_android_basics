@@ -1,5 +1,7 @@
 package com.kudasov.dev.justjava;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
@@ -24,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void submitOrder(View view) {
-        displayMessage(createOrderSummary());
+        sendMessage(createOrderSummary());
     }
 
     private String createOrderSummary() {
@@ -54,9 +56,15 @@ public class MainActivity extends AppCompatActivity {
         return price * quantity;
     }
 
-    private void displayMessage(String message) {
-        TextView priceTextView = (TextView) findViewById(R.id.order_summary);
-        priceTextView.setText(message);
+    private void sendMessage(String message) {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:"));
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Just Java Order for " + ((EditText) findViewById(R.id.name)).getText());
+        intent.putExtra(Intent.EXTRA_TEXT, message);
+
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
 
     public void increment(View view) {
