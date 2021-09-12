@@ -10,33 +10,33 @@
         android:id="@+id/profile_picture"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/profile_image_description"
         android:scaleType="centerCrop"
-        android:contentDescription="@string/profile_image_description" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/name"
+        style="@style/text_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/text_main"
         android:textSize="32dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/profile_picture" />
 
     <TextView
         android:id="@+id/birthday"
+        style="@style/text_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/text_main"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/name" />
 
     <TextView
         android:id="@+id/country"
+        style="@style/text_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/text_main"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/birthday" />
 
