@@ -4,14 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -127,6 +125,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Show toast with result in format correct/total
+     */
     private void showResult() {
         Context context = getApplicationContext();
         CharSequence text = "Your score: " + getResult() + "/" + TOTAL_QUESTION_NUM;
@@ -136,6 +137,10 @@ public class MainActivity extends AppCompatActivity {
         toast.show();
     }
 
+    /**
+     * Calculate correct answers
+     * @return
+     */
     private int getResult() {
         int result = 0;
 
