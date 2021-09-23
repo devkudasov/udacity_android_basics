@@ -2,12 +2,21 @@ package com.kudasov.dev.quizapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    private final int TOTAL_QUESTION_NUM = 6;
     private int currentQuestionNumber = 1;
 
     @Override
@@ -25,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
 
         questionTitle.setText(getString(R.string.question_title, currentQuestionNumber));
         questionText.setText(getQuestionString());
+
+        setAnswerSection();
     }
 
     /**
@@ -49,9 +60,38 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Show question section depends on {currentQuestionNumber}
+     */
+    private void setAnswerSection() {
+        setAnswerVisibility(findViewById(R.id.answer1), currentQuestionNumber == 1);
+        setAnswerVisibility(findViewById(R.id.answer2), currentQuestionNumber == 2);
+        setAnswerVisibility(findViewById(R.id.answer3), currentQuestionNumber == 3);
+        setAnswerVisibility(findViewById(R.id.answer4), currentQuestionNumber == 4);
+        setAnswerVisibility(findViewById(R.id.answer5), currentQuestionNumber == 5);
+        setAnswerVisibility(findViewById(R.id.answer6), currentQuestionNumber == 6);
+    }
+
+    /**
+     * Show view if isVisible = true and hide if false
+     *
+     * @param view
+     * @param isVisible
+     */
+    private void setAnswerVisibility(View view, boolean isVisible) {
+        ViewGroup.LayoutParams params = view.getLayoutParams();
+        params.height = isVisible ? ViewGroup.LayoutParams.WRAP_CONTENT : 0;
+        view.setLayoutParams(params);
+        view.setVisibility(isVisible ? View.VISIBLE : View.INVISIBLE);
+    }
+
+    /**
+     * Next button handler
+     *
+     * @param view
+     */
     public void setNextQuestion(View view) {
         Button prevButton = findViewById(R.id.prev_button);
-        int TOTAL_QUESTION_NUM = 6;
 
         if (currentQuestionNumber != TOTAL_QUESTION_NUM) {
             currentQuestionNumber++;
@@ -63,10 +103,15 @@ public class MainActivity extends AppCompatActivity {
 
             enableButton(prevButton);
         } else {
-            // TODO Show toast
+            showResult();
         }
     }
 
+    /**
+     * Previous button handler
+     *
+     * @param view
+     */
     public void setPrevQuestion(View view) {
         Button nextButton = findViewById(R.id.next_button);
 
@@ -80,6 +125,48 @@ public class MainActivity extends AppCompatActivity {
 
             nextButton.setText(getString(R.string.next_question));
         }
+    }
+
+    private void showResult() {
+        Context context = getApplicationContext();
+        CharSequence text = "Your score: " + getResult() + "/" + TOTAL_QUESTION_NUM;
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+    }
+
+    private int getResult() {
+        int result = 0;
+
+        if (((RadioButton) findViewById(R.id.answer1_variant3)).isChecked()) {
+            result++;
+        }
+        String answer2 = ((EditText) findViewById(R.id.answer2)).getText().toString();
+        if ("James Joseph Parsons".equals(answer2)) {
+            result++;
+        }
+        String answer3 = ((EditText) findViewById(R.id.answer3)).getText().toString();
+        if ("Kunal Nayyar".equals(answer3)) {
+            result++;
+        }
+        String answer4 = ((EditText) findViewById(R.id.answer4)).getText().toString();
+        if ("Simon Maxwell Helberg".equals(answer4)) {
+            result++;
+        }
+        String answer5 = ((EditText) findViewById(R.id.answer5)).getText().toString();
+        if ("Johnny Galecki".equals(answer5)) {
+            result++;
+        }
+        Boolean answer6_1 = ((CheckBox) findViewById(R.id.answer6_variant1)).isChecked();
+        Boolean answer6_2 = ((CheckBox) findViewById(R.id.answer6_variant2)).isChecked();
+        Boolean answer6_3 = ((CheckBox) findViewById(R.id.answer6_variant3)).isChecked();
+        Boolean answer6_4 = ((CheckBox) findViewById(R.id.answer6_variant4)).isChecked();
+        if (answer6_1 && answer6_2 && answer6_3 && answer6_4) {
+            result++;
+        }
+
+        return result;
     }
 
     private void disableButton(Button button) {
