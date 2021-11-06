@@ -10,19 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MusicApp">
         <activity
-            android:name=".AlbumActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SongListActivity"
-            android:exported="false" />
-        <activity
             android:name=".AlbumListActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ArtistActivity"
+            android:label="@string/albums_activity_label"
             android:exported="false" />
         <activity
             android:name=".ArtistListActivity"
+            android:label="@string/artists_activity_label"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

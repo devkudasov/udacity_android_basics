@@ -3,12 +3,9 @@ package com.kudasov.dev.musicapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.GridView;
-import android.widget.ListView;
 
 import com.kudasov.dev.musicapp.adapters.ArtistAdapter;
-import com.kudasov.dev.musicapp.data.Artist;
 import com.kudasov.dev.musicapp.data.DB;
 
 public class ArtistListActivity extends AppCompatActivity {

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MusicApp</string>
+    <string name="albums_activity_label">Albums</string>
+    <string name="artists_activity_label">Library</string>
+    <string name="artist_logo_content_description">Artis logo</string>
+
+    <string name="intent_extra_artist_id">ARTIST_ID</string>
 </resources>

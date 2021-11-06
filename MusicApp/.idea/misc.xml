@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout/activity_album_list.xml" value="0.30398899587345257" />
         <entry key="app/src/main/res/layout/activity_artist.xml" value="0.2296875" />
         <entry key="app/src/main/res/layout/activity_artist_list.xml" value="0.12708333333333333" />
         <entry key="app/src/main/res/layout/activity_artists.xml" value="0.2572463768115942" />
+        <entry key="app/src/main/res/layout/album_item.xml" value="0.23333333333333334" />
         <entry key="app/src/main/res/layout/artist_item.xml" value="0.2296875" />
       </map>
     </option>

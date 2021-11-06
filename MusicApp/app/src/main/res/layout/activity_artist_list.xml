@@ -7,4 +7,4 @@
     android:numColumns="auto_fit"
     android:columnWidth="@dimen/artist_item_width"
     android:gravity="center"
-    tools:context=".ArtistActivity" />
+    tools:context=".ArtistListActivity" />
