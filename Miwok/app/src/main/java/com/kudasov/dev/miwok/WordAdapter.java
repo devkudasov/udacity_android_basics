@@ -1,6 +1,7 @@
 package com.kudasov.dev.miwok;
 
 import android.app.Activity;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,8 +36,14 @@ public class WordAdapter extends ArrayAdapter<Word> {
         TextView defaultTextView = listItemView.findViewById(R.id.english_word);
         defaultTextView.setText(currentWord.getDefaultTranslation());
 
+        int imageId = currentWord.getImageResourceID();
         ImageView imageView = listItemView.findViewById(R.id.word_image);
-        imageView.setImageResource(currentWord.getImageResourceID());
+
+        if (imageId != 0) {
+            imageView.setImageResource(imageId);
+        } else {
+            imageView.setVisibility(View.GONE);
+        }
 
         return listItemView;
     }
