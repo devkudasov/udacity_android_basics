@@ -12,6 +12,7 @@
         <activity
             android:name=".AlbumListActivity"
             android:label="@string/albums_activity_label"
+            android:parentActivityName=".ArtistListActivity"
             android:exported="false" />
         <activity
             android:name=".ArtistListActivity"

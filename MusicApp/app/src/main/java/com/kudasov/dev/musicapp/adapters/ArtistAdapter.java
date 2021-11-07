@@ -36,19 +36,16 @@ public class ArtistAdapter extends ArrayAdapter<Artist> {
         Artist artist = getItem(position);
 
         TextView nameView = listItemView.findViewById(R.id.artist_name);
-        nameView.setText(artist.getName());
+        nameView.setText(getContext().getString(artist.getName()));
 
         ImageView imageView = listItemView.findViewById(R.id.artist_logo);
         imageView.setImageResource(artist.getImage());
 
-        listItemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Context context = getContext();
-                Intent intent = new Intent(context, AlbumListActivity.class);
-                intent.putExtra(context.getString(R.string.intent_extra_artist_id), artist.getId());
-                context.startActivity(intent);
-            }
+        listItemView.setOnClickListener(view -> {
+            Context context = getContext();
+            Intent intent = new Intent(context, AlbumListActivity.class);
+            intent.putExtra(context.getString(R.string.intent_extra_artist_id), artist.getId());
+            context.startActivity(intent);
         });
 
         return listItemView;

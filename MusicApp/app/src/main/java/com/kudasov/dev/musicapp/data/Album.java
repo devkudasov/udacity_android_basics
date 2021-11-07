@@ -1,15 +1,15 @@
 package com.kudasov.dev.musicapp.data;
 
 public class Album {
-    private String title;
+    private int title;
     private int year;
 
-    public Album(String title, int year) {
+    public Album(int title, int year) {
         this.title = title;
         this.year = year;
     }
 
-    public String getTitle() {
+    public int getTitle() {
         return title;
     }
 

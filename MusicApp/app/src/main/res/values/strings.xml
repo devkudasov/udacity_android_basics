@@ -5,4 +5,116 @@
     <string name="artist_logo_content_description">Artis logo</string>
 
     <string name="intent_extra_artist_id">ARTIST_ID</string>
+
+    <string name="rammstein">Rammstein</string>
+    <string name="rammstein_1995">Herzeleid</string>
+    <string name="rammstein_1997">Sehnsucht</string>
+    <string name="rammstein_1999">Live aus Berlin</string>
+    <string name="rammstein_2001">Mutter</string>
+    <string name="rammstein_2004">Reise, Reise</string>
+    <string name="rammstein_2005">Rosenrot</string>
+    <string name="rammstein_2009">Liebe Ist Für Alle Da</string>
+    <string name="rammstein_2011">Made in Germany 1995–2011</string>
+    <string name="rammstein_2015">XXI - Klavier</string>
+    <string name="rammstein_2017">Paris</string>
+    <string name="rammstein_2019">RAMMSTEIN</string>
+    <string name="rammstein_2020">REMIXES</string>
+
+    <string name="queen">Queen</string>
+    <string name="queen_1973">Queen</string>
+    <string name="queen_1974">Sheer Heart Attack</string>
+    <string name="queen_1975">A Night At the Opera</string>
+    <string name="queen_1976">A Day At The Race</string>
+    <string name="queen_1977">News Of The World</string>
+    <string name="queen_1978">Jazz</string>
+    <string name="queen_1980">The Game</string>
+    <string name="queen_1982">Hot Space</string>
+    <string name="queen_1984">The Works</string>
+    <string name="queen_1986">A Kind Of Magic</string>
+    <string name="queen_1989">The Miracle</string>
+    <string name="queen_1991">Innuendo</string>
+    <string name="queen_1995">Made In Heaven</string>
+
+    <string name="black_sabbath">Black Sabbath</string>
+    <string name="black_sabbath_1970">Paranoid</string>
+    <string name="black_sabbath_1971">Master Of Reality</string>
+    <string name="black_sabbath_1973">Sabbath Bloody Sabbath</string>
+    <string name="black_sabbath_1975">Sabotage</string>
+    <string name="black_sabbath_1978">Never Say Die!</string>
+    <string name="black_sabbath_1980">Heaven&amp;Hell</string>
+    <string name="black_sabbath_1983">Born Again</string>
+    <string name="black_sabbath_1987">The Eternal Idol</string>
+
+    <string name="accept">Accept</string>
+    <string name="accept_1982">Accept</string>
+    <string name="accept_1983">Accept</string>
+    <string name="accept_1985">Accept</string>
+    <string name="accept_1986">Accept</string>
+    <string name="accept_1989">Accept</string>
+    <string name="accept_1994">Accept</string>
+    <string name="accept_1996">Accept</string>
+    <string name="accept_2018">Accept</string>
+
+    <string name="iron_maiden">Iron Maiden</string>
+    <string name="iron_maiden_1980">Iron Maiden</string>
+    <string name="iron_maiden_1981">Killers</string>
+    <string name="iron_maiden_1982">The Number Of The Beast</string>
+    <string name="iron_maiden_1983">Peace Of Mind</string>
+    <string name="iron_maiden_1984">Powerslave</string>
+    <string name="iron_maiden_1985">Live After Death</string>
+    <string name="iron_maiden_1986">Somewhere In Time</string>
+    <string name="iron_maiden_1988">Seventh Sons Of A Seventh…</string>
+    <string name="iron_maiden_1992">Fear Of The Dark</string>
+    <string name="iron_maiden_1995">The X Factor</string>
+    <string name="iron_maiden_1998">Virtual XI</string>
+    <string name="iron_maiden_2000">Brave New World</string>
+
+    <string name="slayer">Slayer</string>
+    <string name="slayer_1983">Show No Mercy</string>
+    <string name="slayer_1985">Hell Awaits</string>
+    <string name="slayer_1986">Reign In Blood</string>
+    <string name="slayer_1988">South Of Heaven</string>
+    <string name="slayer_1990">Seasons In The Abyss</string>
+    <string name="slayer_1994">Divine Intervention</string>
+    <string name="slayer_1996">Undisputed Attitude</string>
+    <string name="slayer_1998">Diabolus In Musika</string>
+    <string name="slayer_2001">God Hates Us All</string>
+    <string name="slayer_2006">Christ Illusion</string>
+
+    <string name="pantera">Pantera</string>
+    <string name="pantera_1990">Cowboys From Hell</string>
+    <string name="pantera_1992">Vulgar Display Of Power</string>
+    <string name="pantera_1994">Far Beyond Driven</string>
+    <string name="pantera_1996">The Great Southern Trendkill</string>
+    <string name="pantera_2000">Hole In The Sky</string>
+
+    <string name="metallica">Metallica</string>
+    <string name="metallica_1983">Kill \'Em All</string>
+    <string name="metallica_1984">Ride The Lightning</string>
+    <string name="metallica_1986">Master Of Puppets</string>
+    <string name="metallica_1988">…And Justice For All</string>
+    <string name="metallica_1991">Metallica</string>
+    <string name="metallica_1996">Load</string>
+    <string name="metallica_1997">Reload</string>
+    <string name="metallica_1998">Garage Inc.</string>
+    <string name="metallica_1999">S&amp;M</string>
+    <string name="metallica_2003">St. Anger</string>
+    <string name="metallica_2004">Some Kind Of Monster</string>
+    <string name="metallica_2008">Death Magnetic</string>
+    <string name="metallica_2011">Beyond Magnetic</string>
+
+    <string name="ac_dc">AC/DC</string>
+    <string name="ac_dc_1976">High Voltage</string>
+    <string name="ac_dc_1977">Let There Be Rock</string>
+    <string name="ac_dc_1978">Powerage</string>
+    <string name="ac_dc_1979">Highway To Hell</string>
+    <string name="ac_dc_1980">Back In Black</string>
+    <string name="ac_dc_1983">Flick Of The Switch</string>
+    <string name="ac_dc_1984">\'74 Jailbreak</string>
+    <string name="ac_dc_1985">Fly On The Wall</string>
+    <string name="ac_dc_1986">Who Made Who</string>
+    <string name="ac_dc_1988">Blow Up Your Video</string>
+    <string name="ac_dc_1990">The Razors Edge</string>
+    <string name="ac_dc_1995">Ballbreaker</string>
+    <string name="ac_dc_1997">Bonfire</string>
 </resources>

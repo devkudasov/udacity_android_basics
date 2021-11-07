@@ -23,7 +23,8 @@ public class AlbumListActivity extends AppCompatActivity {
         if (artistId != 0) {
             Artist artist = DB.getArtistById(artistId);
             TextView textView = findViewById(R.id.artist_top_name);
-            textView.setText(artist.getName());
+            textView.setText(getString(artist.getName()));
+
             ImageView imageView = findViewById(R.id.artist_top_logo);
             imageView.setImageResource(artist.getImage());
 

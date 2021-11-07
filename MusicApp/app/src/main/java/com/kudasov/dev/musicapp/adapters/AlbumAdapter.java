@@ -32,7 +32,7 @@ public class AlbumAdapter extends ArrayAdapter<Album> {
         Album album = getItem(position);
 
         TextView albumTitleView = listItemView.findViewById(R.id.album_title);
-        albumTitleView.setText(album.getTitle());
+        albumTitleView.setText(getContext().getString(album.getTitle()));
 
         TextView albumYearView = listItemView.findViewById(R.id.album_year);
         albumYearView.setText(String.valueOf(album.getYear()));

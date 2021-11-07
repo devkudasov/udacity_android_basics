@@ -7,16 +7,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 
 import java.util.ArrayList;
 
 public class WordAdapter extends ArrayAdapter<Word> {
-    public WordAdapter(Activity activity, ArrayList<Word> words) {
+    private int mBackgroundColorResourceID;
+    public WordAdapter(Activity activity, ArrayList<Word> words, int backgroundColorResourceID) {
         super(activity, 0, words);
+
+        mBackgroundColorResourceID = backgroundColorResourceID;
     }
 
     @NonNull
@@ -44,6 +49,9 @@ public class WordAdapter extends ArrayAdapter<Word> {
         } else {
             imageView.setVisibility(View.GONE);
         }
+
+        LinearLayout linearLayout = listItemView.findViewById(R.id.words);
+        linearLayout.setBackgroundColor(ContextCompat.getColor(getContext(), mBackgroundColorResourceID));
 
         return listItemView;
     }
