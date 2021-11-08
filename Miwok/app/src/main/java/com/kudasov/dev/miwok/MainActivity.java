@@ -24,6 +24,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import com.google.android.material.tabs.TabLayout;
 import com.kudasov.dev.miwok.adapters.NavigationAdapter;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,5 +37,8 @@ public class MainActivity extends AppCompatActivity {
         ViewPager viewPager = findViewById(R.id.view_pager);
         NavigationAdapter navigationAdapter = new NavigationAdapter(getSupportFragmentManager());
         viewPager.setAdapter(navigationAdapter);
+
+        TabLayout tabLayout = findViewById(R.id.sliding_tabs);
+        tabLayout.setupWithViewPager(viewPager);
     }
 }

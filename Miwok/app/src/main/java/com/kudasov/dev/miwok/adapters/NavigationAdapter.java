@@ -1,5 +1,6 @@
 package com.kudasov.dev.miwok.adapters;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -30,5 +31,19 @@ public class NavigationAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         return 4;
+    }
+
+    @Nullable
+    @Override
+    public CharSequence getPageTitle(int position) {
+        if (position == 0) {
+            return "Numbers";
+        } else if (position == 1) {
+            return "Family";
+        } else if (position == 2) {
+            return "Colors";
+        } else {
+            return "Phrases";
+        }
     }
 }
