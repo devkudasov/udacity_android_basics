@@ -1,4 +1,4 @@
-package com.kudasov.dev.miwok;
+package com.kudasov.dev.miwok.fragments;
 
 import android.content.Context;
 import android.media.AudioManager;
@@ -12,9 +12,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import com.kudasov.dev.miwok.R;
+import com.kudasov.dev.miwok.Word;
+import com.kudasov.dev.miwok.adapters.WordAdapter;
+
 import java.util.ArrayList;
 
-public class FamilyFragment extends Fragment {
+public class PhrasesFragment extends Fragment {
 
     private MediaPlayer mMediaPlayer;
     private AudioManager mAudioManager;
@@ -34,7 +38,7 @@ public class FamilyFragment extends Fragment {
         }
     };
 
-    public FamilyFragment() {
+    public PhrasesFragment() {
         // Required empty public constructor
     }
 
@@ -47,18 +51,18 @@ public class FamilyFragment extends Fragment {
         mAudioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
 
         final ArrayList<Word> words = new ArrayList<>();
-        words.add(new Word("father", "әpә", R.raw.family_father, R.drawable.family_father));
-        words.add(new Word("mother", "әṭa", R.raw.family_mother, R.drawable.family_mother));
-        words.add(new Word("son", "angsi", R.raw.family_son, R.drawable.family_son));
-        words.add(new Word("daughter", "tune", R.raw.family_daughter, R.drawable.family_daughter));
-        words.add(new Word("older brother", "taachi", R.raw.family_older_brother, R.drawable.family_older_brother));
-        words.add(new Word("younger brother", "chalitti", R.raw.family_younger_brother, R.drawable.family_younger_brother));
-        words.add(new Word("older sister", "teṭe", R.raw.family_older_sister, R.drawable.family_older_sister));
-        words.add(new Word("younger sister", "kolliti", R.raw.family_younger_sister, R.drawable.family_younger_sister));
-        words.add(new Word("grandmother", "ama", R.raw.family_grandmother, R.drawable.family_grandmother));
-        words.add(new Word("grandfather", "paapa", R.raw.family_grandfather, R.drawable.family_grandfather));
+        words.add(new Word("Where are you going?", "minto wuksus", R.raw.phrase_where_are_you_going));
+        words.add(new Word("What is your name?", "tinnә oyaase'nә", R.raw.phrase_what_is_your_name));
+        words.add(new Word("My name is...", "oyaaset...", R.raw.phrase_my_name_is));
+        words.add(new Word("How are you feeling?", "michәksәs?", R.raw.phrase_how_are_you_feeling));
+        words.add(new Word("I’m feeling good.", "kuchi achit", R.raw.phrase_im_feeling_good));
+        words.add(new Word("Are you coming?", "әәnәs'aa?", R.raw.phrase_are_you_coming));
+        words.add(new Word("Yes, I’m coming.", "hәә’ әәnәm", R.raw.phrase_yes_im_coming));
+        words.add(new Word("I’m coming.", "әәnәm", R.raw.phrase_im_coming));
+        words.add(new Word("Let’s go.", "yoowutis", R.raw.phrase_lets_go));
+        words.add(new Word("Come here.", "әnni'nem", R.raw.phrase_come_here));
 
-        WordAdapter wordsAdapter = new WordAdapter(getActivity(), words, R.color.category_family);
+        WordAdapter wordsAdapter = new WordAdapter(getActivity(), words, R.color.category_phrases);
         ListView listView = rootView.findViewById(R.id.list);
         listView.setAdapter(wordsAdapter);
 

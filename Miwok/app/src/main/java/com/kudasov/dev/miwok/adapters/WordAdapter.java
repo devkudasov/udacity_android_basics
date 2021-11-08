@@ -1,7 +1,6 @@
-package com.kudasov.dev.miwok;
+package com.kudasov.dev.miwok.adapters;
 
 import android.app.Activity;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +12,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
+
+import com.kudasov.dev.miwok.R;
+import com.kudasov.dev.miwok.Word;
 
 import java.util.ArrayList;
 
