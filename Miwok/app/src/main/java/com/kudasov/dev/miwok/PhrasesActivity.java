@@ -15,6 +15,7 @@
  */
 package com.kudasov.dev.miwok;
 
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.widget.ListView;
@@ -25,10 +26,36 @@ import java.util.ArrayList;
 
 public class PhrasesActivity extends AppCompatActivity {
 
+    private MediaPlayer mMediaPlayer;
+    private AudioManager mAudioManager;
+
+    private AudioManager.OnAudioFocusChangeListener mOnAudioFocusChangeListener = (focusChange) -> {
+        if (mMediaPlayer == null) {
+            return;
+        }
+
+        if (focusChange == AudioManager.AUDIOFOCUS_GAIN_TRANSIENT || focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK) {
+            mMediaPlayer.pause();
+            mMediaPlayer.seekTo(0);
+        } else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
+            mMediaPlayer.start();
+        } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
+            releaseMediaPlayer();
+        }
+    };
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        releaseMediaPlayer();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
+
+        mAudioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
 
         final ArrayList<Word> words = new ArrayList<>();
         words.add(new Word("Where are you going?", "minto wuksus", R.raw.phrase_where_are_you_going));
@@ -47,8 +74,27 @@ public class PhrasesActivity extends AppCompatActivity {
         listView.setAdapter(wordsAdapter);
 
         listView.setOnItemClickListener((parent, view, position, id) -> {
-            MediaPlayer mediaPlayer = MediaPlayer.create(PhrasesActivity.this, words.get(position).getSoundResourceID());
-            mediaPlayer.start();
+            int audioRequestResult = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
+
+            if (audioRequestResult == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
+                releaseMediaPlayer();
+
+                mMediaPlayer = MediaPlayer.create(PhrasesActivity.this, words.get(position).getSoundResourceID());
+                mMediaPlayer.start();
+
+                mMediaPlayer.setOnCompletionListener((mediaPlayer) -> {
+                    releaseMediaPlayer();
+                });
+            }
         });
+    }
+
+    private void releaseMediaPlayer() {
+        if (mMediaPlayer != null) {
+            mMediaPlayer.release();
+            mMediaPlayer = null;
+
+            mAudioManager.abandonAudioFocus(mOnAudioFocusChangeListener);
+        }
     }
 }
