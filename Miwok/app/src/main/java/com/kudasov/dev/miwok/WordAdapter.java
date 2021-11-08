@@ -50,7 +50,8 @@ public class WordAdapter extends ArrayAdapter<Word> {
             imageView.setVisibility(View.GONE);
         }
 
-        LinearLayout linearLayout = listItemView.findViewById(R.id.words);
+        LinearLayout linearLayout = listItemView.findViewById(R.id.words_container);
+
         linearLayout.setBackgroundColor(ContextCompat.getColor(getContext(), mBackgroundColorResourceID));
 
         return listItemView;
