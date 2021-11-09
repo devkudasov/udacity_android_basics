@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Tour Guide App</string>
+
+    <string name="food_title">Foods</string>
+    <string name="shop_title">Shops</string>
+    <string name="gas_title">Gas Stations</string>
+    <string name="med_title">Med Centers</string>
+</resources>
