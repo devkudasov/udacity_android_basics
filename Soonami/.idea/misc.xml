@@ -3,9 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/drawable/magnitude_circle.xml" value="0.25052083333333336" />
-        <entry key="app/src/main/res/layout/earthquake_activity.xml" value="0.2572463768115942" />
-        <entry key="app/src/main/res/layout/earthquake_item.xml" value="0.2296875" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2572463768115942" />
       </map>
     </option>
   </component>

@@ -16,17 +16,12 @@
 package com.kudasov.dev.eqrthquake;
 
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.kudasov.dev.eqrthquake.adapters.EarthquakeAdapter;
-import com.kudasov.dev.eqrthquake.models.Earthquake;
 import com.kudasov.dev.eqrthquake.utils.QueryUtils;
-
-import java.util.ArrayList;
-import java.util.Date;
 
 public class EarthquakeActivity extends AppCompatActivity {
 
