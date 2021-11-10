@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Tour Guide App</string>
 
+    <string name="open_intent_error_message">Can\'t open app</string>
+
     <string name="food_title">Foods</string>
     <string name="shop_title">Shops</string>
     <string name="gas_title">Gas Stations</string>

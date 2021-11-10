@@ -7,7 +7,7 @@
     </style>
     <style name="ItemImage">
         <item name="android:layout_width">88dp</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">88dp</item>
         <item name="android:scaleType">centerInside</item>
     </style>
 
