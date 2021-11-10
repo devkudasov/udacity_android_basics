@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_container"
+    style="@style/ItemContainer">
+
+    <ImageView
+        android:id="@+id/item_image"
+        style="@style/ItemImage"
+        android:src="@mipmap/ic_launcher" />
+
+    <LinearLayout
+        android:id="@+id/item"
+        style="@style/Item"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_title"
+            style="@style/ItemTitle" />
+
+        <TextView
+            android:id="@+id/item_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item_links"
+        style="@style/ItemLinkContainer">
+
+        <ImageView
+            android:id="@+id/item_link"
+            android:src="@drawable/outline_public_24"
+            style="@style/ItemLink" />
+
+        <ImageView
+            android:id="@+id/item_phone"
+            android:src="@drawable/outline_call_24"
+            style="@style/ItemLink" />
+    </LinearLayout>
+</LinearLayout>

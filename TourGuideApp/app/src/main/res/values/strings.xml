@@ -5,4 +5,72 @@
     <string name="shop_title">Shops</string>
     <string name="gas_title">Gas Stations</string>
     <string name="med_title">Med Centers</string>
+
+    <!--    region FOODS    -->
+    <string name="food_tokiny_title">TokiNY</string>
+    <string name="food_tokiny_link">https://tokiny.by/</string>
+    <string name="food_tokiny_address">vulica Kaĺvaryjskaja 33, Minsk 220073</string>
+    <string name="food_tokiny_phone">+375296175566</string>
+
+    <string name="food_mc_title">McDonald\'s</string>
+    <string name="food_mc_link">https://www.mcdonalds.by/</string>
+    <string name="food_mc_address">vulica Surhanava 63, Minsk 220100</string>
+    <string name="food_mc_phone">+375293935495</string>
+
+    <string name="food_garage_title">GARAGE food&amp;coffee</string>
+    <string name="food_garage_link">http://www.cafegarage.by/menu.php</string>
+    <string name="food_garage_address">vulica Mahilioŭskaja 12а, Minsk 220007</string>
+    <string name="food_garage_phone">+375333187919</string>
+    <!--    endregion FOODS    -->
+
+    <!--    region GAS    -->
+    <string name="gas_l_1_title">GAS Lukoil #1</string>
+    <string name="gas_l_1_link">https://www.lukoil.by/</string>
+    <string name="gas_l_1_address">улица Лещинского 2, Минск 220140</string>
+    <string name="gas_l_1_phone">+375173902024</string>
+
+    <string name="gas_a_100_19_title">GAS A-100</string>
+    <string name="gas_a_100_19_link">http://azs.a-100.by/</string>
+    <string name="gas_a_100_19_address">ул. Брикета 23, Минск</string>
+    <string name="gas_a_100_19_phone">+375175088727</string>
+
+    <string name="gas_19_title">GAS #1</string>
+    <string name="gas_19_link">https://www.belorusneft.by/</string>
+    <string name="gas_19_address">34-й км, М9, Мінск</string>
+    <string name="gas_19_phone">+375175089053</string>
+    <!--    endregion GAS    -->
+
+    <!--    region MEDS    -->
+    <string name="med_idealmed_title">Idealmed Medical Center</string>
+    <string name="med_idealmed_link">https://idealmed.by/</string>
+    <string name="med_idealmed_address">vulica Klary Cetkin 16, Minsk 220004</string>
+    <string name="med_idealmed_phone">+375298888195</string>
+
+    <string name="med_kravira_title">Kravira Medical Center</string>
+    <string name="med_kravira_link">https://kravira.by/</string>
+    <string name="med_kravira_address">Prospekte Pobeditelei 45, Minsk 220035</string>
+    <string name="med_kravira_phone">+375291000003</string>
+
+    <string name="med_ecomedservice_title">Ecomedservice</string>
+    <string name="med_ecomedservice_link">http://www.ems.by/</string>
+    <string name="med_ecomedservice_address">Ulitsa Tolstogo 4, Minsk</string>
+    <string name="med_ecomedservice_phone">+375172077474</string>
+    <!--    endregion MEDS    -->
+
+    <!--    region Shops    -->
+    <string name="shop_columbia_title">Columbia</string>
+    <string name="shop_columbia_link">https://columbia.ru//</string>
+    <string name="shop_columbia_address">Prospekte Pobeditelei 65, Minsk 220035</string>
+    <string name="shop_columbia_phone">+375293107042</string>
+
+    <string name="shop_kairos_title">Kairos</string>
+    <string name="shop_kairos_link">https://kairos-concept.by/</string>
+    <string name="shop_kairos_address">Prospekte Pobeditelei 65, Minsk</string>
+    <string name="shop_kairos_phone">+375296736038</string>
+
+    <string name="shop_love_weekend_title">Love Weekend</string>
+    <string name="shop_love_weekend_link">https://www.facebook.com/loveweekendboutique/</string>
+    <string name="shop_love_weekend_address">Prospekte Pobeditelei 65, Minsk</string>
+    <string name="shop_love_weekend_phone">+375291910046</string>
+    <!--    endregion Shops    -->
 </resources>
