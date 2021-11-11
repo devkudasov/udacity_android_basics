@@ -15,6 +15,8 @@
  */
 package com.kudasov.dev.eqrthquake;
 
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
@@ -43,7 +45,12 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderManag
 
         mProgressBar = findViewById(R.id.progress_bar);
 
-        getSupportLoaderManager().initLoader(1, null, this).forceLoad();
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+
+        if (networkInfo != null && networkInfo.isConnected()) {
+            getSupportLoaderManager().initLoader(1, null, this).forceLoad();
+        }
     }
 
     private void updateUI(ArrayList<Earthquake> earthquakes) {
