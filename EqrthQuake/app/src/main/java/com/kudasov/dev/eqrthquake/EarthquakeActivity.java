@@ -16,7 +16,9 @@
 package com.kudasov.dev.eqrthquake;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -32,10 +34,14 @@ import java.util.ArrayList;
 
 public class EarthquakeActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<ArrayList<Earthquake>> {
 
+    private ProgressBar mProgressBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.earthquake_activity);
+
+        mProgressBar = findViewById(R.id.progress_bar);
 
         getSupportLoaderManager().initLoader(1, null, this).forceLoad();
     }
@@ -54,6 +60,7 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderManag
 
     @Override
     public void onLoadFinished(@NonNull Loader<ArrayList<Earthquake>> loader, ArrayList<Earthquake> data) {
+        mProgressBar.setVisibility(View.GONE);
         updateUI(data);
     }
 
